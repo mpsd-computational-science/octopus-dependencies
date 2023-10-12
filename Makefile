@@ -4,3 +4,6 @@ spack-package.py:
 
 clean:
 	rm -fv spack-package.py
+
+libs:
+	cat spack-package.py | grep depends_on
