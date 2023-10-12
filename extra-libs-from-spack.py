@@ -1,11 +1,15 @@
 
 
 import importlib
+import pprint
 
 mock_classes_and_functions = """
+from contextlib import contextmanager
 
 deps = {}
 versions = {}
+variants = {}
+context = None
 
 class AutotoolsPackage:
     pass
@@ -18,6 +22,22 @@ def maintainers(*args):
 
 def version(ver, **kwd):
     versions[ver] = kwd
+
+def variant(name, **kwd):
+    variants[name] = kwd
+
+def depends_on(name, **kwd):
+    deps[name] = kwd
+
+@contextmanager
+def when(arg):
+    try:
+        context = arg
+        # print(f"reached 'when({arg})')")
+        yield
+    finally:
+        # print(f"end 'when({arg})')")
+        context = None
 """
 
 
@@ -61,4 +81,4 @@ def main():
 
 if __name__ == "__main__":
     octopus = main()
-    print(octopus)
+    pprint.pprint(octopus.deps)
