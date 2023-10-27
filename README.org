@@ -16,9 +16,9 @@
 
 ** COMMENT
 
-We could create a table with that information and insert it here. (Draft in [[extract-libraries-from-spack.py]].)
+We could create a table with that information and insert it here. (Draft in [[dev/extract-libraries-from-spack/extract-libraries-from-spack.py]].)
 
-* Installation methods and documentation
+* installation methods and documentation
 
 ** Spack
 
