@@ -12,7 +12,7 @@
 
 * Versions of dependencies
 
-[[https://raw.githubusercontent.com/spack/spack/develop/var/spack/repos/builtin/packages/octopus/package.py][Spack's ~package.py~ file for Octopus]] provides information on the appropriate versions of the dependencies.
+[[https://github.com/spack/spack/blob/develop/var/spack/repos/builtin/packages/octopus/package.py][Spack's ~package.py~ file for Octopus]] provides information on the appropriate versions of the dependencies.
 
 ** COMMENT
 
