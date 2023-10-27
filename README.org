@@ -1,1 +1,44 @@
-*  Gather information on dependencies of Octopus
+#+TITLE:  Gather information on dependencies of Octopus
+
+* Supported dependencies by installation method
+
+|                    | blas | lapack | gsl | libxc | fftw | mpi    | dftb+       |
+|--------------------+------+--------+-----+-------+------+--------+-------------|
+| Spack              | Y    | Y      | Y   | Y     | Y    | ~+mpi~ | ~+dftbplus~ |
+| Docker image       |      |        |     |       |      |        |             |
+| Debian package     |      |        |     |       |      |        |             |
+| Compile in Debian  |      |        |     |       |      |        |             |
+| Compile everything | Y    | Y      | Y   | Y     | Y    | Y      | Y           |
+
+* Versions of dependencies
+
+[[https://raw.githubusercontent.com/spack/spack/develop/var/spack/repos/builtin/packages/octopus/package.py][Spack's ~package.py~ file for Octopus]] provides information on the appropriate versions of the dependencies.
+
+** COMMENT
+
+We could create a table with that information and insert it here. (Draft in [[extract-libraries-from-spack.py]].)
+
+* Installation methods and documentation
+
+** Spack
+
+See https://github.com/fangohr/octopus-in-spack#readme
+
+** Docker image
+
+https://github.com/fangohr/octopus-in-docker#readme
+
+** Debian package
+
+Documentation missing. (Only available for MPSD staff at the moment?)
+
+** Compile in Debian
+
+See commands in https://github.com/fangohr/octopus-in-docker/blob/main/Dockerfile
+
+** Compile everything (i.e. Octopus and everything) from source
+
+https://octopus-code.org/documentation/13/manual/install/
+
+*
+
